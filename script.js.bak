@@ -1,0 +1,20 @@
+window.onload = function() { 
+    if ($("#alpheios-install-links").length > 0)
+    {
+        check_for_alpheios(false) 
+    }
+};
+$(document).ready( function() {
+  $("#alpheios-texts-block .tochead").click(
+       function(a_e)
+       {
+            if ($(a_e.target).hasClass('tochead'))
+            {
+                $(this).toggleClass("openmenu")
+                $(this).children().toggle();
+                return false;
+            }
+            
+        });
+  $("#alpheios-texts-block .tochead:not(.openmenu)").children().hide();
+} );
